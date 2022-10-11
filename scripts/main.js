@@ -8,6 +8,6 @@ function addPoint(){
 }
 
 myButton.onclick = function(){
-    num = num +5;
+    num ++;
     addPoint();
 }

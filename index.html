@@ -7,9 +7,11 @@
     <input type="button" value="test" onclick="bananeClick();"></input>
     <span id="score">0</span>
     <script>
-      var score = 0;
+      var score = localStorage.getItem('pouf');
+      localStorage.setItem('pouf',0);
       function bananeClick(){
         score++;
+        localStorage.setItem('pouf',score);
         document.getElementById("score").innerHTML = score;
       }
     </script>

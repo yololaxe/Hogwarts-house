@@ -3,9 +3,10 @@
   <head>
     <title>Page Title</title>
   </head>
+  <link href="styles/style.css" rel="stylesheet" type="text/css">
   <body>
     <input type="button" value="test" onclick="bananeClick();"></input>
-    <span id="score">0</span>
+    <h1 id="score">0</h1>
     <script>
       var score = localStorage.getItem('pouf');
       localStorage.setItem('pouf',0);

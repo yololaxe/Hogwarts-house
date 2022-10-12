@@ -35,42 +35,76 @@
         <h4 id="scoreG">0</h4> 
       </div> 
       <div style ="float: left">
-      <input type="button" value="pouf" class="pouf" onclick="poufClick();"></input>
-      <input type="button" value="serd" class="serd" onclick="serdClick();"></input>
-      <input type="button" value="serp" class="serp" onclick="serpClick();"></input>
-      <input type="button" value="gryf" class="gryf" onclick="gryfClick();"></input>
+      
+    </div>
+    <div>
+      <input type="button" value="pouf+1" class="pouf" onclick="poufClick(1);"></input>
+      <input type="button" value="serd+1" class="serd" onclick="serdClick(1);"></input>
+      <input type="button" value="serp+1" class="serp" onclick="serpClick(1);"></input>
+      <input type="button" value="gryf+1" class="gryf" onclick="gryfClick(1);"></input>
+    </div>
+    <div>
+      <input type="button" value="pouf+5" class="pouf" onclick="poufClick(5);"></input>
+      <input type="button" value="serd+5" class="serd" onclick="serdClick(5);"></input>
+      <input type="button" value="serp+5" class="serp" onclick="serpClick(5);"></input>
+      <input type="button" value="gryf+5" class="gryf" onclick="gryfClick(5);"></input>
+    </div>
+    <div>
+      <input type="button" value="pouf+10" class="pouf" onclick="poufClick(10);"></input>
+      <input type="button" value="serd+10" class="serd" onclick="serdClick(10);"></input>
+      <input type="button" value="serp+10" class="serp" onclick="serpClick(10);"></input>
+      <input type="button" value="gryf+10" class="gryf" onclick="gryfClick(10);"></input>
+    </div>
+    <div>
+      <input type="button" value="pouf-1" class="pouf" onclick="poufClick(-1);"></input>
+      <input type="button" value="serd-1" class="serd" onclick="serdClick(-1);"></input>
+      <input type="button" value="serp-1" class="serp" onclick="serpClick(-1);"></input>
+      <input type="button" value="gryf-1" class="gryf" onclick="gryfClick(-1);"></input>
+    </div>
+    <div>
+      <input type="button" value="pouf-5" class="pouf" onclick="poufClick(-5);"></input>
+      <input type="button" value="serd-5" class="serd" onclick="serdClick(-5);"></input>
+      <input type="button" value="serp-5" class="serp" onclick="serpClick(-5);"></input>
+      <input type="button" value="gryf-5" class="gryf" onclick="gryfClick(-5);"></input>
+    </div>
+    <div>
+      <input type="button" value="pouf-10" class="pouf" onclick="poufClick(-10);"></input>
+      <input type="button" value="serd-10" class="serd" onclick="serdClick(-10);"></input>
+      <input type="button" value="serp-10" class="serp" onclick="serpClick(-10);"></input>
+      <input type="button" value="gryf-10" class="gryf" onclick="gryfClick(-10);"></input>
     </div>
     <script>
 
-      var scoreP = localStorage.getItem('pouf');
-      var scoreSD = localStorage.getItem('serd');
-      var scoreSP = localStorage.getItem('serp');
-      var scoreG = localStorage.getItem('gryf');
+      var scoreP = parseInt(localStorage.getItem('pouf'));
+      var scoreSD = parseInt(localStorage.getItem('serd'));
+      var scoreSP = parseInt(localStorage.getItem('serp'));
+      var scoreG = parseInt(localStorage.getItem('gryf'));
       localStorage.setItem('pouf',0);
       localStorage.setItem('serd',0);
       localStorage.setItem('serp',0);
       localStorage.setItem('gryf',0);
       
 
-      function poufClick(){
-        scoreP++;
-        localStorage.setItem('pouf',scoreP);
-        document.getElementById("scoreP").innerHTML = '' + scoreP ;
+
+      function poufClick(num){
+        scoreP += parseInt(num);
+        localStorage.setItem('pouf', (scoreP));
+        document.getElementById("scoreP").innerHTML =  scoreP ;
       }
-      function serdClick(){
-        scoreSD++;
+      function serdClick(num){
+        scoreSD += parseInt(num);
         localStorage.setItem('serd',scoreSD);
-        document.getElementById("scoreSD").innerHTML = '' + scoreSD ;
+        document.getElementById("scoreSD").innerHTML =  scoreSD ;
       }
-      function serpClick(){
-        scoreSP++;
+      function serpClick(num){
+        scoreSP += parseInt(num);
         localStorage.setItem('serp',scoreSP);
-        document.getElementById("scoreSP").innerHTML =''+  scoreSP ;
+        document.getElementById("scoreSP").innerHTML =  scoreSP ;
       }
-      function gryfClick(){
-        scoreG++;
+      function gryfClick(num){
+        scoreG += parseInt(num);
         localStorage.setItem('gryf',scoreG);
-        document.getElementById("scoreG").innerHTML = '' + scoreG;
+        document.getElementById("scoreG").innerHTML =  scoreG;
       }
       
     </script>

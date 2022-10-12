@@ -5,16 +5,44 @@
     <link href="style/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <h1 id="score">0</h1>
-    <input type="button" value="test" onclick="bananeClick();"></input>
+    <h1 id="scoreP">0   0   0   0</h1>  
+    <img src="MaisonsPetit.png">
+    <input type="button" value="pouf" onclick="poufClick();"></input>
+    <input type="button" value="serd" onclick="serdClick();"></input>
+    <input type="button" value="serp" onclick="serpClick();"></input>
+    <input type="button" value="gryf" onclick="gryfClick();"></input>
     <script>
-      var score = localStorage.getItem('pouf');
+      
       localStorage.setItem('pouf',0);
-      function bananeClick(){
-        score++;
-        localStorage.setItem('pouf',score);
-        document.getElementById("score").innerHTML = score;
+      localStorage.setItem('serd',0);
+      localStorage.setItem('serp',0);
+      localStorage.setItem('gryf',0);
+      var scoreP = localStorage.getItem('pouf');
+      var scoreSD = localStorage.getItem('serd');
+      var scoreSP = localStorage.getItem('serp');
+      var scoreG = localStorage.getItem('gryf');
+
+      function poufClick(){
+        scoreP++;
+        localStorage.setItem('pouf',scoreP);
+        document.getElementById("scoreP").innerHTML = '' + scoreP + scoreSD + scoreSP + scoreG;
       }
+      function serdClick(){
+        scoreSD++;
+        localStorage.setItem('serd',scoreSD);
+        document.getElementById("scoreP").innerHTML = ''+ scoreP + scoreSD + scoreSP + scoreG;
+      }
+      function serpClick(){
+        scoreSP++;
+        localStorage.setItem('serp',scoreSP);
+        document.getElementById("scoreP").innerHTML =''+ scoreP + scoreSD + scoreSP + scoreG;
+      }
+      function gryfClick(){
+        scoreG++;
+        localStorage.setItem('gryf',scoreG);
+        document.getElementById("scoreP").innerHTML = ''+ scoreP + scoreSD + scoreSP + scoreG;
+      }
+      
     </script>
   </body>
 </html>

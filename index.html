@@ -13,14 +13,15 @@
     <input type="button" value="gryf" onclick="gryfClick();"></input>
     <script>
       
-      localStorage.setItem('pouf',0);
-      localStorage.setItem('serd',0);
-      localStorage.setItem('serp',0);
-      localStorage.setItem('gryf',0);
       var scoreP = localStorage.getItem('pouf');
       var scoreSD = localStorage.getItem('serd');
       var scoreSP = localStorage.getItem('serp');
       var scoreG = localStorage.getItem('gryf');
+      localStorage.setItem('pouf',0);
+      localStorage.setItem('serd',0);
+      localStorage.setItem('serp',0);
+      localStorage.setItem('gryf',0);
+      
 
       function poufClick(){
         scoreP++;

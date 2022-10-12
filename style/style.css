@@ -43,19 +43,19 @@ h4 {
  margin-left: 40px;
 }
 
-input{
-    position: absolute; 
-}
-
 .pouf {
-    margin-top: 0px;
+    margin-left: 400px;
+    margin-top: -200px;
 }
 .serd {
-    margin-top: 30px;
+
+    margin-top: -20px;
 }
 .serp {
-    margin-top: 60px;
+
+    margin-top: -20px;
 }
 .gryf {
-    margin-top: 90px;
+
+    margin-top: -20px;
 }
